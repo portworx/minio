@@ -223,7 +223,7 @@ func getDownloadURL() (downloadURL string) {
 		return "docker pull minio/minio"
 	}
 
-	if runtime.GOOS == "windows" {
+	if runtime.GOOS == globalWindowsOSName {
 		return minioReleaseURL + "minio.exe"
 	}
 

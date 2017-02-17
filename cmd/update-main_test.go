@@ -86,8 +86,8 @@ func TestGetCurrentReleaseTime(t *testing.T) {
 		errorMessage3 = "exec: \"" + minioBinaryPath4 + "\": executable file not found in %PATH%"
 	}
 	errorMessage4 := "Unable to get ModTime of /tmp/non-existent-file. stat /tmp/non-existent-file: no such file or directory"
-	if runtime.GOOS == "windows" {
-		errorMessage4 = "Unable to get ModTime of C:\\tmp\\non-existent-file. GetFileAttributesEx C:\\tmp\\non-existent-file: The system cannot find the path specified."
+	if runtime.GOOS == globalWindowsOSName {
+		errorMessage4 = "Unable to get ModTime of C:\\tmp\\non-existent-file. GetFileAttributesEx C:\\tmp\\non-existent-file: The system cannot find the file specified."
 	}
 
 	testCases := []struct {
