@@ -16,7 +16,7 @@
 
 import React from 'react'
 import classNames from 'classnames'
-import logo from '../../img/logo.svg'
+import logo from '../../img/logo.png'
 import Alert from 'react-bootstrap/lib/Alert'
 import * as actions from '../actions'
 import InputGroup from '../components/InputGroup'

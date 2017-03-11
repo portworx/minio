@@ -84,7 +84,7 @@ var exports = {
       {from: 'app/img/browsers/chrome.png'},
       {from: 'app/img/browsers/firefox.png'},
       {from: 'app/img/browsers/safari.png'},
-      {from: 'app/img/logo.svg'},
+      {from: 'app/img/logo.png'},
       {from: 'app/index.html'}
     ]),
     new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en)$/),
