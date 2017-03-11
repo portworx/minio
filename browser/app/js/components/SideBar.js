@@ -20,7 +20,7 @@ import ClickOutHandler from 'react-onclickout'
 import Scrollbars from 'react-custom-scrollbars/lib/Scrollbars'
 import connect from 'react-redux/lib/components/connect'
 
-import logo from '../../img/logo.svg'
+import logo from '../../img/logo.png'
 import Dropdown from 'react-bootstrap/lib/Dropdown'
 
 let SideBar = ({visibleBuckets, loadBucket, currentBucket, selectBucket, searchBuckets, sidebarStatus, clickOutside, showPolicy, deleteBucket, toggleBucketDropdown, showBucketDropdown}) => {
@@ -58,7 +58,7 @@ let SideBar = ({visibleBuckets, loadBucket, currentBucket, selectBucket, searchB
                        }) }>
         <div className="fes-header clearfix hidden-sm hidden-xs">
           <img src={ logo } alt="" />
-          <h2>Minio Browser</h2>
+          <h2>Portworx Browser</h2>
         </div>
         <div className="fes-list">
           <div className="input-group ig-dark ig-left ig-search" style={ { display: web.LoggedIn() ? 'block' : 'none' } }>
