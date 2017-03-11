@@ -98,10 +98,7 @@ func (kC kafkaConn) Close() {
 
 // Fire - to implement logrus.Hook interface
 func (kC kafkaConn) Fire(entry *logrus.Entry) error {
-	body, err := entry.Reader()
-	if err != nil {
-		return err
-	}
+	body := entry.Buffer
 
 	// Construct message to send to Kafka
 	msg := sarama.ProducerMessage{
@@ -110,7 +107,7 @@ func (kC kafkaConn) Fire(entry *logrus.Entry) error {
 	}
 
 	// Attempt sending the message to Kafka
-	_, _, err = kC.producer.SendMessage(&msg)
+	_, _, err := kC.producer.SendMessage(&msg)
 	if err != nil {
 		return fmt.Errorf("Error sending event to Kafka - %v", err)
 	}
