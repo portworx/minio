@@ -4,7 +4,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: #32393F;
+    background: #31333b;
     z-index: 100;
     transition: opacity 200ms;
     -webkit-transition: opacity 200ms;
@@ -95,4 +95,13 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+
+.feba-toggle {
+    background-color: #f1592a !important;
+}
+
+.fe-sidebar, .fes-host {
+    background-color: #31333b !important;
 }

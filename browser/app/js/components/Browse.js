@@ -554,7 +554,7 @@ export default class Browse extends React.Component {
     let createButton = ''
     if (web.LoggedIn()) {
       createButton = <Dropdown dropup className="feb-actions" id="fe-action-toggle">
-                       <Dropdown.Toggle noCaret className="feba-toggle">
+                       <Dropdown.Toggle noCaret className="feba-toggle px-toggle">
                          <span><i className="fa fa-plus"></i></span>
                        </Dropdown.Toggle>
                        <Dropdown.Menu>
