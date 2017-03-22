@@ -65,6 +65,11 @@ func newServerConfigV15() *serverConfigV15 {
 		Enable: true,
 		Level:  "error",
 	}
+	srvCfg.Logger.File = fileLogger{
+		Enable:   true,
+		Level:    "error",
+		Filename: "/var/log/px-obj.log",
+	}
 
 	// Make sure to initialize notification configs.
 	srvCfg.Notify.AMQP = make(map[string]amqpNotify)
