@@ -59,7 +59,7 @@ func newServerConfigV15() *serverConfigV15 {
 		Notify:  &notifier{},
 	}
 	srvCfg.SetCredential(mustGetNewCredential())
-	srvCfg.SetBrowser("on")
+	srvCfg.SetBrowser("off")
 	// Enable console logger by default on a fresh run.
 	srvCfg.Logger.Console = consoleLogger{
 		Enable: true,
