@@ -115,10 +115,7 @@ func (kC kafkaConn) Close() {
 
 // Fire - to implement logrus.Hook interface
 func (kC kafkaConn) Fire(entry *logrus.Entry) error {
-	body, err := entry.Reader()
-	if err != nil {
-		return err
-	}
+	body := entry.Buffer
 
 	// Extract the key of the event as a string
 	keyStr, ok := entry.Data["Key"].(string)
@@ -135,7 +132,7 @@ func (kC kafkaConn) Fire(entry *logrus.Entry) error {
 	}
 
 	// Attempt sending the message to Kafka
-	_, _, err = kC.producer.SendMessage(&msg)
+	_, _, err := kC.producer.SendMessage(&msg)
 	if err != nil {
 		return kkErrFunc("Error sending event to Kafka - %v", err)
 	}
