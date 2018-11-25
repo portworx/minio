@@ -266,7 +266,7 @@ func fsCreateFile(filePath string, reader io.Reader, buf []byte, fallocSize int6
 		return 0, errors.Trace(err)
 	}
 
-	writer, err := os.OpenFile((filePath), os.O_CREATE|os.O_WRONLY, 0666)
+	writer, err := os.OpenFile((filePath), os.O_CREATE|os.O_WRONLY|os.O_SYNC, 0666)
 	if err != nil {
 		return 0, osErrToFSFileErr(err)
 	}
